@@ -3,6 +3,7 @@
 # Dependencies: Mikero DePbo Tools v. == 0.7.92 or >= 0.8.76
 # Download page: https://mikero.bytex.digital/Downloads
 # Direct link: https://mikero.bytex.digital/api/download?filename=depbo-tools-0.7.92-linux-64bit.tgz
+set -x
 echo -e "- Liberation_RX PBO build script -\n"
 
 rm -f ./*.pbo
