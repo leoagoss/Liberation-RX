@@ -40,8 +40,8 @@ jobs:
           export LD_LIBRARY_PATH=$GITHUB_WORKSPACE/depbo-tools-0.8.78/lib
           echo $PATH
 
-          echo Check Tool
-          makepbo ?
+          echo Check Pbo Tool ready
+          which makepbo 
   
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
