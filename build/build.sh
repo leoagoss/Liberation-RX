@@ -5,13 +5,13 @@
 # Direct link: https://mikero.bytex.digital/api/download?filename=depbo-tools-0.7.92-linux-64bit.tgz
 echo -e "- Liberation_RX PBO build script -\n"
 
-rm ./*.pbo
+rm -f ./*.pbo
 
 BUILD_ONLY=(
 )
 
 which makepbo
-if [[ $? = 1 ]]; then
+if [ $? -eq 1 ]; then
     echo -e "	\e[31mWARNING!!!\e[0m
 		You have no DePbo tools installed!
 		Please, visit \e[33mhttps://mikero.bytex.digital/Downloads\e[0m page to get the latest version for Linux."
