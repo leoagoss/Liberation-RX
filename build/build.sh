@@ -10,7 +10,7 @@ rm ./*.pbo
 BUILD_ONLY=(
 )
 
-which makepbo &>/dev/null
+which makepbo
 if [[ $? = 1 ]]; then
     echo -e "	\e[31mWARNING!!!\e[0m
 		You have no DePbo tools installed!
