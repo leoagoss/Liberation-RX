@@ -45,6 +45,6 @@ jobs:
   
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
-        run: ./build/build.sh
-
-
+        run: |
+          chmod +x ./build/build.sh
+          ./build/build.sh
