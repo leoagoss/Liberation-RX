@@ -47,3 +47,6 @@ jobs:
           chmod +x ./build/build.sh
           cd ./build/
           ./build.sh
+
+      - name: Check Build LRX PBOs
+        run: ls -al ./build/
