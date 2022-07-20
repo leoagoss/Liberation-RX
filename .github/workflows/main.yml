@@ -30,21 +30,22 @@ jobs:
         run: |
           echo Install Libs
           sudo apt-get install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0 tar
-          
+         
           echo Install Pbo tools
           wget https://mikero.bytex.digital/api/download?filename=depbo-tools-0.8.78-linux-x86_64.tgz -O depbo-tools-0.8.tgz
           tar -xf depbo-tools-0.8.tgz
-        
-          ls -al $GITHUB_WORKSPACE
 
           echo Update PATH
           export PATH=$PATH:$GITHUB_WORKSPACE/depbo-tools-0.8.78/bin
           export LD_LIBRARY_PATH=$GITHUB_WORKSPACE/depbo-tools-0.8.78/lib
-          
   
+      - name: DBG
+        run: |
+          ls -al .
+          ls -al .github\workflows\build.sh
+
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
-        run: |
-          echo call Vitalii build script
-          .github\workflows\build.sh
+        run: .github\workflows\build.sh
+
 
