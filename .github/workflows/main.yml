@@ -50,3 +50,8 @@ jobs:
 
       - name: Check Build LRX PBOs
         run: ls -al ./build/
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: latest-build
+          path: ./build/*.pbo
