@@ -6,7 +6,9 @@
 set -x
 echo -e "- Liberation_RX PBO build script -\n"
 
-rm -f ./*.pbo
+pwd 
+ls -al .
+#rm -f *.pbo
 
 BUILD_ONLY=(
 )
