@@ -35,11 +35,13 @@ jobs:
           wget https://mikero.bytex.digital/api/download?filename=depbo-tools-0.8.78-linux-x86_64.tgz -O depbo-tools-0.8.tgz
           tar -xf depbo-tools-0.8.tgz
         
+         ls -al $HOME
+
           echo Update PATH
-          export PATH=$PATH:$HOME/bin
-          export LD_LIBRARY_PATH=$HOME/lib
+          export PATH=$PATH:$HOME/depbo-tools-0.8.78/bin
+          export LD_LIBRARY_PATH=$HOME/depbo-tools-0.8.78/lib
           
-          ls -al 
-          
+         
+
           echo call Vitalii build script
-          build.sh
+          .github\workflows\build.sh
