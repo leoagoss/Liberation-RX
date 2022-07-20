@@ -35,12 +35,13 @@ jobs:
           wget https://mikero.bytex.digital/api/download?filename=depbo-tools-0.8.78-linux-x86_64.tgz -O depbo-tools-0.8.tgz
           tar -xf depbo-tools-0.8.tgz
 
-          echo Update PATH
+          echo Update PATH / LD_LIBRARY_PATH
           export PATH=$PATH:$GITHUB_WORKSPACE/depbo-tools-0.8.78/bin
           export LD_LIBRARY_PATH=$GITHUB_WORKSPACE/depbo-tools-0.8.78/lib
+          echo $PATH
 
           echo Check Tool
-          makepbo --version
+          makepbo
   
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
