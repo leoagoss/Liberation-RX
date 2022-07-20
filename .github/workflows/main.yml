@@ -45,4 +45,5 @@ jobs:
 
           echo Build LRX PBOs
           chmod +x ./build/build.sh
-          ./build/build.sh
+          cd ./build/
+          ./build.sh
