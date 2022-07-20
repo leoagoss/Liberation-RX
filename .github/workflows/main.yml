@@ -38,14 +38,12 @@ jobs:
           echo Update PATH
           export PATH=$PATH:$GITHUB_WORKSPACE/depbo-tools-0.8.78/bin
           export LD_LIBRARY_PATH=$GITHUB_WORKSPACE/depbo-tools-0.8.78/lib
-  
-      - name: DBG
-        run: |
-          ls -al .
-          ls -al .github\workflows\build.sh
 
+          echo Check Tool
+          makepbo --version
+  
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
-        run: .github\workflows\build.sh
+        run: ./build/build.sh
 
 
