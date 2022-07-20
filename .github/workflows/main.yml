@@ -41,7 +41,7 @@ jobs:
           echo $PATH
 
           echo Check Tool
-          makepbo
+          makepbo ?
   
       # Runs a single command using the runners shell
       - name: Build LRX PBOs
